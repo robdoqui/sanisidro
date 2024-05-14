@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php 
-require 'conexion.php';
+require '/https://robdoqui.github.io/sanisidro/php/conexion.php';
 if (isset($_POST['login'])) {
     $depto= $_POST['depto'];	
     $password= $_POST['password'];
@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 			session_start();
 			$_SESSION["datos"]= $depto;
 			echo "valor a pasar " . $_SESSION["datos"] . "<br>";
-			header("Location: /https://robdoqui.github.io/php/menu.php");
+			header("Location: /https://robdoqui.github.io/sanisidro/php/menu.php");
 		}
     }
     else {
