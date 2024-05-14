@@ -1,5 +1,5 @@
 <?php 
-$servidor= "127.0.0.1";
+$servidor= "127.0.0.1:3306";
 $usuario= "root";
 $clave="";
 $base_de_datos="sanisidro45";
