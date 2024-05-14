@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php 
-require '/https://robdoqui.github.io/sanisidro/php/conexion.php';
+require 'https://robdoqui.github.io/sanisidro/php/conexion.php';
 if (isset($_POST['login'])) {
     $depto= $_POST['depto'];	
     $password= $_POST['password'];
@@ -19,17 +19,17 @@ if (isset($_POST['login'])) {
 		$row = mysqli_fetch_assoc($resultado);
 	    echo 'depto: ' . $row['depto'] . ' cambio : ' . $row['cambio'] . '   '. "<br>";
 		if ($row['cambio'] == 0) {
-            ?> <script language="JavaScript">alert("Se solicita hacer cambio de password");window.location.href="/prueba2/registro.html"</script>"; <?php
+            ?> <script language="JavaScript">alert("Se solicita hacer cambio de password");window.location.href="https://robdoqui.github.io/sanisidro/registro.html"</script>"; <?php
 		}
 		else {
 			session_start();
 			$_SESSION["datos"]= $depto;
 			echo "valor a pasar " . $_SESSION["datos"] . "<br>";
-			header("Location: /https://robdoqui.github.io/sanisidro/php/menu.php");
+			header("Location: https://robdoqui.github.io/sanisidro/php/menu.php");
 		}
     }
     else {
-		?> <script language="JavaScript">alert("Credenciales Inválidas. Por Favor, verifica tu depto y/o password");window.location.href="/prueba2/index.html"</script>"; <?php
+		?> <script language="JavaScript">alert("Credenciales Inválidas. Por Favor, verifica tu depto y/o password");window.location.href="https://robdoqui.github.io/sanisidro/index.html"</script>"; <?php
     }
 }
 ?>
