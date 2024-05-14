@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 			session_start();
 			$_SESSION["datos"]= $depto;
 			echo "valor a pasar " . $_SESSION["datos"] . "<br>";
-			header("Location: /prueba2/php/menu.php");
+			header("Location: /https://robdoqui.github.io/php/menu.php");
 		}
     }
     else {
